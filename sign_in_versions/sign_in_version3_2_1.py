@@ -97,11 +97,11 @@ class SignIn:
         
         def username_already_exists():
             self.usernameEntry.delete(0, END)
-            print("username already exists, pick a new one")
+            messagebox.showerror("Error", "username already exists, pick a new one")
         
         def successful_register(username, password):
             handle_data_file.register_user(username, password, handle_data_file.dataSet)
-            print("register successful, try signing in!")
+            messagebox.showinfo("Success", "register successful, try signing in!")
 
         # ----------------------------- help button functions -----------------------------
         
